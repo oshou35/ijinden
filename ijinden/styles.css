@@ -1,34 +1,39 @@
+/* 全体的なフォント設定とページのレイアウトを定義 */
 body {
-  font-family: Arial, sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-  background-color: #f0f0f0;
+  font-family: Arial, sans-serif; /* フォントファミリーを Arial に設定し、サンセリフフォントとしてスタイルを提供 */
+  display: flex; /* フレックスボックスレイアウトを使用する */
+  flex-direction: column; /* 要素を縦方向に配置する */
+  align-items: center; /* 要素を水平方向に中央揃えにする */
+  padding: 20px; /* 要素の周囲に20pxの余白を追加 */
+  background-color: #f0f0f0; /* 背景色をライトグレーに設定 */
 }
 
+/* 見出しのスタイル設定 */
 h1 {
-  color: #333;
+  color: #333; /* テキストの色をダークグレーに設定 */
 }
 
+/* カードリストをグリッドで3列に並べる */
 #card-list {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  width: 100%;
-  max-width: 400px;
+  display: grid; /* グリッドレイアウトを使用する */
+  grid-template-columns: repeat(3, 1fr); /* 1行3列でカードを配置 */
+  gap: 20px; /* カード間の隙間を20pxに設定 */
+  width: 100%; /* 幅を100%に設定 */
+  max-width: 1200px; /* 最大幅を1200pxに設定（必要に応じて調整） */
+  padding: 10px; /* 内側の余白を10px追加 */
 }
 
+/* カードのスタイル設定 */
 .card {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 5px;
+  display: flex; /* 各カード内のレイアウトはフレックスボックス */
+  flex-direction: column; /* カード内容を縦に並べる */
+  align-items: center; /* 内容を中央揃えにする */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* カードに影を追加 */
 }
 
-.card > img{
-  width: 30%;
+/* カード内の画像のスタイル（必要に応じて調整） */
+.card img {
+  width: 100%; /* 画像をカード内で最大幅に合わせる */
+  height: auto; /* 画像の縦横比を保つ */
+  border-radius: 5px; /* 画像の角を丸くする */
 }

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>カード情報登録</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- SheetJS ライブラリ -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>カード情報登録</h1>
+  </header>
+  <main>
+    <!-- ステップ1: Excelファイルアップロード -->
+    <section id="step-1">
+      <h2>カード情報取り込み</h2>
+      <input type="file" id="excel-upload" accept=".xlsx, .xls">
+      <button id="upload-button">アップロード</button>
+    </section>
+
+    <!-- ステップ2: 取り込み内容確認 -->
+    <section id="step-2" style="display: none;">
+      <h2>取り込み内容確認</h2>
+      <table id="upload-table"></table>
+      <button id="next-step">次へ</button>
+    </section>
+
+    <!-- ステップ3: 追加情報登録（画像データ入力） -->
+    <section id="step-3" style="display: none;">
+      <h2>追加情報登録（画像データ）</h2>
+      <div id="image-upload-container">
+        <!-- ここにカードごとの画像ファイル名入力欄を生成 -->
+      </div>
+      <button id="save-button">登録完了</button>
+    </section>
+  </main>
+  <script src="import.js"></script>
+</body>
+</html>
